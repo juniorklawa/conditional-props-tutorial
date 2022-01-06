@@ -20,7 +20,7 @@ function App() {
       />
       <AvatarComponent
         borderColor="blue"
-        initials="JD"
+        initials="MS"
         type={AVATAR_TYPE_ENUM.INITIALS}
       />
     </div>

@@ -13,6 +13,7 @@ const AvatarWithInitials: React.FC<AllAvatarProps> = ({
         borderRadius: "50%",
         border: "3px solid",
         borderColor: borderColor,
+        backgroundColor: "#eee",
         justifyContent: "center",
         alignItems: "center",
         display: "flex",
