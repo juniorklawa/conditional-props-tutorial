@@ -5,7 +5,7 @@ export enum AVATAR_TYPE_ENUM {
   DEFAULT = "DEFAULT",
 }
 
-// inteface that our components will use to pass the props
+// inteface that our components will use to pass the props (it must contain all the props)
 export interface AllAvatarProps {
   type: AVATAR_TYPE_ENUM;
   borderColor: string;
@@ -13,23 +13,18 @@ export interface AllAvatarProps {
   initials?: string;
 }
 
-// props that all components types will have
-interface RequiredTextProps {
-  type: AVATAR_TYPE_ENUM;
-  borderColor: string;
-}
-
-// title and color props (type should be defined here)
+// Avatar with image props (type should be defined here)
 export type AvatarWithImageProps = {
   type: AVATAR_TYPE_ENUM.IMAGE;
   url: string;
-} & RequiredTextProps;
+} & AllAvatarProps;
 
-// title and size props (type should also be defined here)
+// Avatar with initials props (type should also be defined here)
 export type AvatarWithInitialsProps = {
   type: AVATAR_TYPE_ENUM.INITIALS;
   initials: string;
-} & RequiredTextProps;
+} & AllAvatarProps;
 
-export type SelectedModeProps = RequiredTextProps &
+// selected mode props will be All avatar props with the intersection of the type we want to use, so required props will have priority on top of optional ones
+export type SelectedModeProps = AllAvatarProps &
   (AvatarWithImageProps | AvatarWithInitialsProps);
