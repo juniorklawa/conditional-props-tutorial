@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import AvatarComponent from "./components/AvatarComponent";
+import { AVATAR_TYPE_ENUM } from "./types";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        display: "flex",
+        height: "100vh",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <AvatarComponent
+        borderColor="red"
+        url="https://i.pravatar.cc/150?img=3"
+        type={AVATAR_TYPE_ENUM.IMAGE}
+      />
+      <AvatarComponent
+        borderColor="blue"
+        initials="JD"
+        type={AVATAR_TYPE_ENUM.INITIALS}
+      />
     </div>
   );
 }
