@@ -26,5 +26,4 @@ export type AvatarWithInitialsProps = {
 } & AllAvatarProps;
 
 // selected mode props will be All avatar props with the intersection of the type we want to use, so required props will have priority on top of optional ones
-export type SelectedModeProps = AllAvatarProps &
-  (AvatarWithImageProps | AvatarWithInitialsProps);
+export type SelectedModeProps = AvatarWithImageProps | AvatarWithInitialsProps;
