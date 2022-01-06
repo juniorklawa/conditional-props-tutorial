@@ -5,6 +5,7 @@ const AvatarWithImage: React.FC<AllAvatarProps> = ({ url, borderColor }) => {
   return (
     <img
       style={{
+        objectFit: "cover",
         height: 200,
         width: 200,
         borderRadius: "50%",

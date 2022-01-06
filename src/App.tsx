@@ -15,7 +15,7 @@ function App() {
     >
       <AvatarComponent
         borderColor="red"
-        url="https://i.pravatar.cc/150?img=3"
+        url="https://i.imgur.com/xb5IBL0.jpg"
         type={AVATAR_TYPE_ENUM.IMAGE}
       />
       <AvatarComponent
