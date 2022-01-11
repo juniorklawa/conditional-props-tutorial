@@ -13,17 +13,17 @@ export interface AllAvatarProps {
   initials?: string;
 }
 
-// Avatar with image props (type should be defined here)
+// Avatar with image props (type should be defined here) so required props will have priority on top of optional ones
 export type AvatarWithImageProps = {
   type: AVATAR_TYPE_ENUM.IMAGE;
   url: string;
 } & AllAvatarProps;
 
-// Avatar with initials props (type should also be defined here)
+// Avatar with initials props (type should also be defined here) so required props will have priority on top of optional ones
 export type AvatarWithInitialsProps = {
   type: AVATAR_TYPE_ENUM.INITIALS;
   initials: string;
 } & AllAvatarProps;
 
-// selected mode props will be All avatar props with the intersection of the type we want to use, so required props will have priority on top of optional ones
+// selected mode props will be All avatar props with the intersection of the type we want to use, 
 export type SelectedModeProps = AvatarWithImageProps | AvatarWithInitialsProps;
